@@ -1,5 +1,5 @@
 body{
-    background-color: #a4ffff;
+    background-color: #68E3D1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
 }
@@ -8,13 +8,16 @@ th{
     align-self: center;
     
 }
+i{
+    padding-left: 20px;
+}
 .card-container,.card-container-alt, a, button{
     transition: all 0.3s ease-in-out;
 }
 .top-menu{
     justify-self: center;
     align-self: center;
-    padding-top: 50px;
+    padding-bottom: 20px;
 }
 .top-table{
     background-color: #cdffe6a4;
@@ -39,6 +42,7 @@ th{
     transform: scale(1.1);
     border: 2px solid black;
     text-shadow: 2px 2px 1px gray;
+    cursor: pointer;
 }
 
 .img-logo{
@@ -50,9 +54,12 @@ th{
     animation-duration: 3.5s;
     animation-iteration-count: infinite;
 }
+.img-inicial{
+    justify-self: center;
+}
 .background-header{
-    background: linear-gradient( #ceff6c 90%, #a4ffff);
-    background-color: #ceff6c;
+    background: linear-gradient( #c7ff56 90%, #68E3D1);
+    background-color: #c7ff56;
     padding-bottom: 50px;
 }
 @keyframes logo-animation{
@@ -61,9 +68,6 @@ th{
     }
     25%{
         transform: rotate(10deg);
-    }
-    50%{
-        transform: rotate(0deg);
     }
     75%{
         transform: rotate(-10deg);
@@ -103,6 +107,10 @@ th{
 }
 .local-button{
     justify-self: center;
+    
+    animation-name: animacao-button;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 .inicial-button{
     justify-self: center;
@@ -121,17 +129,37 @@ th{
     color: violet;
     text-shadow: 2px 2px 2px blue;
     border: 4px solid;
-    transform: scale(1.2);
+    cursor: pointer;
 }
 @keyframes inicial-animation{
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(2deg);
+    }
+    75%{
+        transform: rotate(-2deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+@keyframes animacao-button{
+    0%{
+        transform: scale(1);
+    }
     50%{
-        transform: scale(1.025);
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
     }
 }
 
 /* intro page config*/
 .intro-page{
-    background-color: #a4ffff;
+    background-color: #68E3D1;
     padding-left: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -185,8 +213,8 @@ th{
 
 /* start page config*/
 .start-page{
-    background: linear-gradient(#a4ffff, #ceff6c 10%, #ceff6c 85%, white);
-    background-color: #ceff6c;
+    background: linear-gradient(#68E3D1, #c7ff56 10%, #c7ff56 85%, white);
+    background-color: #c7ff56;
     padding-left: 30px;
     padding-top: 20px;
 }
@@ -229,7 +257,7 @@ th{
 
 /* end page config*/
 .end-page{
-    background: linear-gradient(white, #ceff6c 20%, #ceff6c 70%, #a4ffff);
+    background: linear-gradient(white, #c7ff56 20%, #c7ff56 70%, #68E3D1);
     background-color: #61faff;
     padding-left: 30px;
     padding-right: 30px;
@@ -272,11 +300,28 @@ th{
     transform: scale(1.1);
     border: 2px solid black;
     text-shadow: 2px 2px 1px gray;
+    cursor: pointer;
 }
 
 /* end page config*/
 .final-page{
-    background-color: #a4ffff;
+    background-color: #68E3D1;
     padding-left: 30px;
     padding-top: 20px;
+    display: flex;
+    justify-self: center;
+}
+.contatos-container{
+    padding-right: 350px;
+}
+.redes-sociais-container{
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+}
+.final-logo{
+    justify-self: center;
+}
+.logo-img-final{
+    width: 200px;
 }
