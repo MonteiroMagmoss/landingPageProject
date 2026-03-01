@@ -1,150 +1,173 @@
-body{
-    background-color: #68E3D1;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* =====================================================
+   RESET & BASE 
+===================================================== */
+
+body {
     margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #68E3D1;
+    display: grid;
 }
-th{
+
+th {
     padding: 20px;
     align-self: center;
-    
 }
-i{
+
+i {
     padding-left: 20px;
 }
-.modes{
-    display: flex;
-    gap: 20px;
-    justify-self: end;
-    padding-right: 20px;
+a {
+    text-decoration: none;
+    color: black;
 }
-.buttonMode{
-    background-color: #d5df49;
-    color: blueviolet;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 2px teal;
-    font-size: 20px;
-    border: solid;
-    border-radius: 20%;
-    width: max-content;
-    height: 60px;
-    margin-left: 50px;
-    margin-top: 20px;
-    margin-right: 20px;
-}
-.buttonMode:hover{
-    background-color: yellow;
-    color: violet;
-    text-shadow: 2px 2px 2px blue;
-    border: 4px solid;
-    cursor: pointer;
-}
-.card-container,.card-container-alt, a, button{
+
+/* Transições globais */
+.card-container,
+.card-container-alt,
+a,
+button {
     transition: all 0.3s ease-in-out;
 }
-.top-menu{
-    justify-self: center;
-    align-self: center;
-    padding-bottom: 20px;
+
+/* =====================================================
+   BOTÕES DE MODO LEITURA
+===================================================== */
+
+.modes {
+    gap: 20px;
+    justify-self: start;
+    padding-left: 20px;
 }
-.top-table{
-    background-color: #cdffe6a4;
-    display: flex;
-    flex-direction: row;
-    border: 5px solid #58f7a7a4;
-    border-radius: 20px;
-    border-collapse: collapse;
-    box-shadow: 2px 2px 2px #8a8a8a;
+
+.buttonMode {
+    background-color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 20px black;
+    font-size: 20px;
+    border-radius: 50px;
+    width: max-content;
+    height: 60px;
+    margin: 20px 20px 0 50px;
 }
-.top-button{
-    background-color: #dea2ff;
-    box-shadow: 2px 2px 2px black;
-    border: none;
-    border-radius: 100px;
-    font-size: 25px;
-    padding: 20px;
-}
-.top-button:hover{
-    background-color: purple;
-    color: white;
-    transform: scale(1.1);
-    border: 2px solid black;
-    text-shadow: 2px 2px 1px gray;
+
+.buttonMode:hover {
+    background-color: gray;
+    text-shadow: 2px 2px 2px whitesmoke;
     cursor: pointer;
 }
 
-.img-logo{
-    width: 200px;
-    padding-left: 15px;
-    border-radius: 100%;
+/* =====================================================
+   HEADER
+===================================================== */
 
-    animation-name: logo-animation;
-    animation-duration: 3.5s;
-    animation-iteration-count: infinite;
-}
-.img-inicial{
-    justify-self: center;
-}
-.background-header{
-    background: linear-gradient( #c7ff56 90%, #68E3D1);
+.background-header {
+    background: linear-gradient(#c7ff56 90%, #68E3D1);
     background-color: #c7ff56;
     padding-bottom: 50px;
 }
-.background-header-nova-cor{
+
+.background-header-nova-cor {
     background: linear-gradient(#6c951b 90%, #00937dff);
     background-color: #6c951b;
     padding-bottom: 50px;
 }
-@keyframes logo-animation{
-    0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(10deg);
-    }
-    75%{
-        transform: rotate(-10deg);
-    }
-    100%{
-        transform: rotate(0deg);
-    }
+
+.top-menu {
+    justify-self: center;
+    align-self: center;
+    padding-bottom: 20px;
 }
 
-/* inicial page config*/
-.inicial-page{
-    background-color: #87cfeb94;
-    box-shadow: 2px 2px 5px 1px black;
-    text-align: justify;
-    text-shadow: 1px 1px 1px green;
-    border-radius: 10%;
-    padding: 40px;
+.top-table {
     display: flex;
+    flex-wrap: nowrap;
+    background-color: white;
+    box-shadow: 5px 5px 50px #00000083;
+    border-radius: 100px;
+    padding: 35px 200px;
+}
+.link-pages{
     justify-content: center;
-    justify-self: center;
+    align-items: center;
+}
+
+/* Botões do menu */
+
+.top-button {
+    border: none;
+    border-radius: 100px;
+    font-size: 25px;
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.top-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+}
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.img-logo {
+    width: 150px;
+    border-radius: 100%;
+    animation: logo-animation 3.5s infinite;
+}
+
+.img-inicial {
+    justify-content: start;
+}
+
+@keyframes logo-animation {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* =====================================================
+   HERO / INICIAL
+===================================================== */
+
+.inicial-page {
+    justify-content: center;
     align-items: center;
     gap: 50px;
+
     width: max-content;
+    padding: 40px;
+
+    background-color: #87cfeb94;
+    border-radius: 10%;
+    box-shadow: 2px 2px 5px 1px black;
+
+    text-align: justify;
+    text-shadow: 1px 1px 1px green;
 }
-.inicial-description{
+
+.inicial-description {
     max-width: 500px;
 }
-.petshop-description{
+
+.petshop-description {
     text-indent: 10%;
 }
-.inicial-img{
+
+.inicial-img {
     padding-left: 50px;
-    
-    animation-name: inicial-animation;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+    animation: inicial-animation 1s infinite;
 }
-.local-button{
+
+.local-button {
     justify-self: center;
-    
-    animation-name: animacao-button;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+    animation: animacao-button 1s infinite;
 }
-.inicial-button{
+
+.inicial-button {
     justify-self: center;
     background-color: #d5df49;
     color: blueviolet;
@@ -156,202 +179,204 @@ i{
     width: max-content;
     height: 60px;
 }
-.inicial-button:hover{
+
+.inicial-button:hover {
     background-color: yellow;
     color: violet;
     text-shadow: 2px 2px 2px blue;
     border: 4px solid;
     cursor: pointer;
 }
-@keyframes inicial-animation{
-    0%{
-        transform: rotate(0);
-    }
-    25%{
-        transform: rotate(2deg);
-    }
-    75%{
-        transform: rotate(-2deg);
-    }
-    100%{
-        transform: rotate(0);
-    }
-}
-@keyframes animacao-button{
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.1);
-    }
-    100%{
-        transform: scale(1);
-    }
+
+@keyframes inicial-animation {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0); }
 }
 
-/* intro page config*/
-.intro-page{
+@keyframes animacao-button {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* =====================================================
+   INTRO / CARDS
+===================================================== */
+
+.intro-page {
     background-color: #68E3D1;
-    padding-left: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0 20px 30px;
 }
-.intro-page-new-color{
+
+.intro-page-new-color {
     background-color: #00937dff;
-    padding-left: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0 20px 30px;
 }
-.card-container{
-    background-color: #ffe8c6e1;
+
+.card-container,
+.card-container-alt {
     width: 900px;
     height: 400px;
-    box-shadow: 2px 2px 5px 1px black;
-    border-radius: 10px;
-    padding: 10px;
     margin: 10px;
-    display: flex;
-    justify-items: end;
+    padding: 10px;
+
+    background-color: #ffe8c6e1;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 1px black;
 }
-.card-container:hover{
+
+.card-container:hover {
     transform: translateX(100px);
 }
-.card-container-alt{
-    background-color: #ffe8c6e1;
-    width: 900px;
-    height: 400px;
-    box-shadow: 2px 2px 5px 1px black;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    display: flex;
-    justify-items: end;
+
+.card-container-alt {
     justify-self: end;
 }
-.card-container-alt:hover{
+
+.card-container-alt:hover {
     transform: translateX(-100px);
 }
-.card-description{
+
+.card-description {
+    padding: 20px;
+    font-size: 18px;
     text-align: justify;
     text-shadow: 1px 1px 1px violet;
-    font-size: 18px;
-    padding: 20px;
 }
-.img-container{
-    display: flex;
+
+.img-container {
     justify-content: center;
     align-items: center;
 }
-.card-img{
+
+.card-img {
     width: 450px;
     height: 300px;
-    padding: 20px;        
+    padding: 20px;
     border-radius: 100px;
 }
 
-/* start page config*/
-.start-page{
+/* =====================================================
+   CONTATOS
+===================================================== */
+
+.start-page {
     background: linear-gradient(#68E3D1, #c7ff56 10%, #c7ff56 85%, white);
     background-color: #c7ff56;
-    padding-left: 30px;
-    padding-top: 20px;
+    padding: 20px 0 0 30px;
 }
-.start-page-new-color{
+
+.start-page-new-color {
     background: linear-gradient(#00937dff, #6c951b 10%, #6c951b 85%, #b4b4b4);
     background-color: #6c951b;
-    padding-left: 30px;
-    padding-top: 20px;
+    padding: 20px 0 0 30px;
 }
-.contatos-container{
-    display: flex;
+
+.contatos-container {
     gap: 50px;
     justify-self: center;
+    padding-right: 350px;
 }
-.contatos{
+
+.contatos {
     align-self: center;
     width: 500px;
 }
-.map-container  {
+
+.map-container {
     justify-self: center;
     box-shadow: 2px 2px 5px 1px black;
 }
 
-/* mid page config*/
-.mid-page{
+/* =====================================================
+   SOBRE / MID
+===================================================== */
+
+.mid-page {
     background-color: white;
-    padding-left: 30px;
-    padding-top: 20px;
+    padding: 20px 0 0 30px;
 }
-.mid-page-new-color{
+
+.mid-page-new-color {
     background-color: #b4b4b4;
-    padding-left: 30px;
-    padding-top: 20px;
+    padding: 20px 0 0 30px;
 }
-.mid-img-container{
+
+.mid-container {
+    justify-self: center;
+}
+
+.mid-img-container {
     justify-self: center;
     border-radius: 100px;
 }
-.mid-img{
+
+.mid-img {
+    width: 600px;
     padding: 20px;
     border-radius: 100px;
-    width: 600px;
 }
-.mid-container{
-    display: flex;
-    justify-self: center;
-}
-.mid-desc{
+
+.mid-desc {
     width: 600px;
 }
 
-/* end page config*/
-.end-page{
+/* =====================================================
+   PRODUTOS
+===================================================== */
+
+.end-page {
     background: linear-gradient(white, #c7ff56 20%, #c7ff56 70%, #68E3D1);
     background-color: #61faff;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px;
-}
-.end-page-new-color{
-    background: linear-gradient(#b4b4b4, #6c951b 20%, #6c951b 70%, #00937dff);
-    background-color: #00937dff;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px;
+    padding: 20px 30px 0;
 }
 
-.produtos-container{
-    display: flex;
+.end-page-new-color {
+    background: linear-gradient(#b4b4b4, #6c951b 20%, #6c951b 70%, #00937dff);
+    background-color: #00937dff;
+    padding: 20px 30px 0;
+}
+
+.produtos-container {
     gap: 50px;
     justify-self: center;
 }
-.produtos-card{
-    background-color: #ffffffbb;
-    box-shadow: 2px 2px 5px 1px black;
+
+.produtos-card {
     width: 300px;
     height: 400px;
-    border-radius: 20px;
     padding: 20px;
     text-align: center;
+
+    background-color: #ffffffbb;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px 1px black;
 }
-.produtos-card:hover{
+
+.produtos-card:hover {
     transform: scale(1.05);
 }
-.prod-img{
+
+.prod-img {
     width: 200px;
     height: 250px;
     border-radius: 50px;
 }
-.comprar-button{
+
+.comprar-button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+
     background-color: #81d468;
-    box-shadow: 2px 2px 2px black;
     border: none;
     border-radius: 100px;
-    font-size: 20px;
-    padding: 10px;
-    margin-top: 10px;
+    box-shadow: 2px 2px 2px black;
 }
-.comprar-button:hover{
+
+.comprar-button:hover {
     background-color: green;
     color: white;
     transform: scale(1.1);
@@ -360,33 +385,32 @@ i{
     cursor: pointer;
 }
 
-/* end page config*/
-.final-page{
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.final-page {
+    justify-self: center;
+    padding: 20px 0 0 30px;
     background-color: #68E3D1;
-    padding-left: 30px;
-    padding-top: 20px;
-    display: flex;
-    justify-self: center;
-}
-.final-page-new-color{
-    background-color: #00937dff;
-    padding-left: 30px;
-    padding-top: 20px;
-    display: flex;
-    justify-self: center;
 }
 
-.contatos-container{
-    padding-right: 350px;
+.final-page-new-color {
+    justify-self: center;
+    padding: 20px 0 0 30px;
+    background-color: #00937dff;
 }
-.redes-sociais-container{
+
+.redes-sociais-container {
     align-self: center;
     justify-self: center;
     align-items: center;
 }
-.final-logo{
+
+.final-logo {
     justify-self: center;
 }
-.logo-img-final{
+
+.logo-img-final {
     width: 200px;
 }
