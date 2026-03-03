@@ -5,7 +5,7 @@
 body {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #68E3D1;
+    background-color: #86efac;
     display: grid;
 }
 
@@ -62,7 +62,7 @@ button {
 ===================================================== */
 
 .background-header {
-    background: linear-gradient(#f8fafc 90%, #22c55e);
+    background: linear-gradient(#f8fafc 90%, #86efac);
     padding-bottom: 50px;
 }
 
@@ -237,7 +237,7 @@ button {
 ===================================================== */
 
 .intro-page {
-    background-color: #68E3D1;
+    background-color: #86efac;
     padding: 20px 0 20px 30px;
 }
 
@@ -294,8 +294,7 @@ button {
 ===================================================== */
 
 .start-page {
-    background: linear-gradient(#68E3D1, #c7ff56 10%, #c7ff56 85%, white);
-    background-color: #c7ff56;
+    background: linear-gradient(#86efac, #22c55e 10%, #22c55e 85%, white);
     padding: 20px 0 0 30px;
 }
 
@@ -359,7 +358,7 @@ button {
 ===================================================== */
 
 .end-page {
-    background: linear-gradient(white, #c7ff56 20%, #c7ff56 70%, #68E3D1);
+    background: linear-gradient(white, #22c55e 20%, #22c55e 70%, #86efac);
     background-color: #61faff;
     padding: 20px 30px 0;
 }
@@ -371,6 +370,8 @@ button {
 }
 
 .produtos-container {
+    display: flex;
+    margin-bottom: 10%;
     gap: 50px;
     justify-self: center;
 }
@@ -423,13 +424,13 @@ button {
 .final-page {
     justify-self: center;
     padding: 20px 0 0 30px;
-    background-color: #68E3D1;
+    background-color: #86efac;
 }
 
 .final-page-new-color {
     justify-self: center;
     padding: 20px 0 0 30px;
-    background-color: #00937dff;
+    background-color: #86efac;
 }
 
 .redes-sociais-container {
